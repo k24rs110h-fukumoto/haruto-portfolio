@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", "Noto Sans JP", sans-serif;
+  background: #ffffff;
+  color: #14245c;
+  overflow-x: hidden;
+}
+
+/* =====================
+   HOME
+===================== */
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 850px;
+  overflow: hidden;
+}
+
+#bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =====================
+   HEADER
+===================== */
+
+.header {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  right: 32px;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  padding: 14px 34px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #18256b;
+  font-size: 22px;
+  font-weight: 900;
+  box-shadow: 0 10px 28px rgba(30, 50, 120, 0.18);
+}
+
+.header nav {
+  display: flex;
+  gap: 28px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+}
+
+.header nav a {
+  color: #18256b;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* =====================
+   LEFT AREA
+===================== */
+
+.home-content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+.nameCard-area {
+  position: absolute;
+  top: 130px;
+  left: 35px;
+  z-index: 6;
+}
+
+.nameCard-area img {
+  width: 320px;
+  display: block;
+}
+
+.alertCard-area {
+  position: absolute;
+  left: 35px;
+  bottom: 35px;
+  z-index: 6;
+}
+
+.alertCard-area img {
+  width: 320px;
+  display: block;
+}
+
+/* =====================
+   CHARACTER
+===================== */
+
+.character-area {
+  position: absolute;
+  left: 430px;
+  bottom: 10px;
+  z-index: 7;
+}
+
+.character-area img {
+  height: 800px;
+  max-height: 88vh;
+  display: block;
+  filter: drop-shadow(0 24px 32px rgba(20, 40, 100, 0.22));
+}
+
+/* =====================
+   RIGHT MENU CARDS
+===================== */
+
+.menu-panel {
+  position: absolute;
+  top: 130px;
+  right: 35px;
+  z-index: 8;
+
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  grid-auto-rows: auto;
+  gap: 6px;
+}
+
+.menu-card {
+  display: block;
+  transition: 0.25s ease;
+}
+
+.menu-card img {
+  width: 280px;
+  display: block;
+  filter: drop-shadow(0 14px 22px rgba(20, 40, 100, 0.18));
+}
+
+.menu-card:hover {
+  transform: translateY(-7px) scale(1.02);
+}
+
+
+/* =====================
+   BOTTOM ROUND SELECT
+   ※丸いセレクト用
+===================== */
+
+.bottom-select {
+  position: absolute;
+  right: 35px;
+  bottom: 32px;
+  z-index: 10;
+
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.bottom-select a {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  background: rgba(255, 255, 255, 0.82);
+  border: 4px solid rgba(100, 135, 230, 0.7);
+  box-shadow: 0 14px 26px rgba(30, 50, 120, 0.24);
+
+  transition: 0.25s ease;
+}
+
+.bottom-select a:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+.bottom-select img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* =====================
+   MAIN SECTIONS
+===================== */
+
+main {
+  background: #000000;
+}
+
+.section {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.section h2 {
+  font-size: 48px;
+  margin-bottom: 24px;
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.card {
+  padding: 36px;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(30, 54, 120, 0.12);
+}
+
+.card span {
+  color: #2563eb;
+  font-weight: 900;
+}
+
+.card h3 {
+  margin: 16px 0;
+  font-size: 28px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 1200px) {
+  .home {
+    height: auto;
+    min-height: 100vh;
+    padding: 110px 20px 50px;
+  }
+
+  #bgImage {
+    position: fixed;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .nameCard-area,
+  .alertCard-area,
+  .character-area,
+  .menu-panel,
+  .bottom-select {
+    position: static;
+  }
+
+  .nameCard-area img,
+  .alertCard-area img {
+    width: min(430px, 92vw);
+  }
+
+  .character-area img {
+    height: 520px;
+    max-width: 92vw;
+    object-fit: contain;
+  }
+
+  .menu-panel {
+    margin-top: 30px;
+    grid-template-columns: 1fr;
+    width: min(430px, 92vw);
+  }
+
+  .menu-card img {
+    width: 100%;
+  }
+
+  .bottom-select {
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

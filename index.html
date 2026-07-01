@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haruto Fukumoto Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">HARUTO PORTFOLIO</div>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#projects">Projects</a>
+            <a href="#research">Research</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+
+        <img id="bgImage" src="assets/images/home/bg-home.png" alt="BgImage" />
+
+        <div class="home-content">
+            <div class="nameCard-area">
+                <img id="nameCardImage" src="assets/images/home/nameCard-home.png" alt="NameCard" />
+            </div>
+
+            <div class="alertCard-area">
+                <img id="alertCardImage" src="assets/images/home/alertCard-home.png" alt="AlertCard" />
+            </div>
+
+            <div class="character-area">
+                <img id="characterImage" src="assets/images/home/character-home.png" alt="Character" />
+            </div>
+        </div>
+
+        <div class="menu-panel">
+            <a href="#profile" class="menu-card">
+                <img src="assets/images/home/profileCard-home.png" alt="Profile" />
+            </a>
+
+            <a href="#projects" class="menu-card">
+                <img src="assets/images/home/projectsCard-home.png" alt="Projects" />
+            </a>
+
+            <a href="#research" class="menu-card">
+                <img src="assets/images/home/researchCard-home.png" alt="Research" />
+            </a>
+
+            <a href="#skills" class="menu-card">
+                <img src="assets/images/home/skillsCard-home.png" alt="Skills" />
+            </a>
+
+            <a href="#experience" class="menu-card">
+                <img src="assets/images/home/experienceCard-home.png" alt="Experience" />
+            </a>
+
+            <a href="#contact" class="menu-card">
+                <img src="assets/images/home/contactCard-home.png" alt="Contact" />
+            </a>
+        </div>
+
+        <div class="bottom-select">
+            <a href="#projects"><img src="assets/images/home/mission-icon.png" alt="Mission"></a>
+            <a href="#contact"><img src="assets/images/home/mail-icon.png" alt="Mail"></a>
+            <a href="#skills"><img src="assets/images/home/item-icon.png" alt="Item"></a>
+            <a href="#research"><img src="assets/images/home/setting-icon.png" alt="Setting"></a>
+        </div>
+    </section>
+
+    <main>
+        <section class="section" id="profile" data-character="assets/images/character-profile.png">
+            <h2>Trainer Card</h2>
+            <p>九州産業大学 理工学部 情報科学科で、Unityを用いたゲーム開発とゲーム開発支援システムの研究に取り組んでいます。</p>
+        </section>
+
+        <section class="section" id="projects" data-character="assets/images/character-projects.png">
+            <h2>Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <span>MAIN QUEST</span>
+                    <h3>Unity Game Development</h3>
+                    <p>2D RPG、3Dホラーゲームなどを企画・設計・実装。</p>
+                </div>
+                <div class="card">
+                    <span>SIDE QUEST</span>
+                    <h3>Whiteout Survival Tools</h3>
+                    <p>Next.js / Django / Firebaseを用いたゲーム攻略支援Webアプリ。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="research" data-character="assets/images/character-home.png">
+            <h2>Research Lab</h2>
+            <p>Unityプロジェクト内のScript、Prefab、Sceneなどを解析し、構造情報をJSON化するゲーム開発支援システムを研究しています。</p>
+        </section>
+
+        <section class="section" id="skills" data-character="assets/images/character-profile.png">
+            <h2>Status</h2>
+            <p>Unity / C# / TypeScript / Next.js / Django / Swift / Git</p>
+        </section>
+
+        <section class="section" id="contact" data-character="assets/images/character-home.png">
+            <h2>Contact</h2>
+            <p>GitHub、Paiza、メールなどへのリンクを設置予定。</p>
+        </section>
+
+        <section class="section" id="experience" data-character="assets/images/character-home.png">
+            <h2>Experience</h2>
+            <p>大学での研究、個人開発、チーム開発、アルバイト経験などをまとめています。</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
