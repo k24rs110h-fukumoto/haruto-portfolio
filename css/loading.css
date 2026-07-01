@@ -1,0 +1,75 @@
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #f6f9ff;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 22px;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#loading.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-logo {
+  font-size: 34px;
+  font-weight: 900;
+  color: #18256b;
+}
+
+.loading-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.loading-icons span {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(30, 50, 120, 0.18);
+  opacity: 0.25;
+  transform: translateY(8px) scale(0.9);
+  animation: iconLoad 1.2s infinite;
+}
+
+.loading-icon-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.loading-icons span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loading-icons span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.loading-icons span:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.loading-icons span:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+@keyframes iconLoad {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(8px) scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0) scale(1.08);
+  }
+}

@@ -1,0 +1,109 @@
+@media (max-width: 1200px) {
+  html {
+    scroll-snap-type: none;
+  }
+
+  .home {
+    height: auto;
+    min-height: 100vh;
+    padding: 110px 20px 50px;
+  }
+
+  #bgImage {
+    position: fixed;
+  }
+
+  .home-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-top: 0;
+  }
+
+  .character-image {
+    height: 520px;
+    max-width: 92vw;
+    object-fit: contain;
+  }
+
+  .right-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card img {
+    width: min(420px, 92vw);
+  }
+
+  .bottom-select {
+    position: static;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .fixed-header {
+    top: 18px;
+    left: 18px;
+    gap: 10px;
+  }
+
+  .logo-button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .site-logo-img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .current-bubble {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .welcome {
+    min-height: 100vh;
+    padding: 120px 22px 80px;
+  }
+
+  .welcome-video-wrap {
+    height: 38vh;
+    min-height: 260px;
+  }
+
+  .welcome-content {
+    width: 100%;
+  }
+
+  .welcome-content h1 {
+    font-size: clamp(42px, 13vw, 64px);
+    line-height: 1;
+  }
+
+  .welcome-lead {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .scroll-guide {
+    right: 22px;
+    bottom: 28px;
+  }
+
+  .scroll-line {
+    width: 44px;
+  }
+
+  .side-menu {
+    width: 86vw;
+    right: -90vw;
+  }
+}
