@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   initFadeAnimation();
   initCurrentView();
   initProfileTabs();
+
+  // projects.htmlを読み込んだ後に実行する
+  initProjectCards();
 });
 
 async function loadHtmlParts() {
