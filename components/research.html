@@ -1,0 +1,63 @@
+<section class="research-section section-view" id="research">
+    <img class="research-bg" src="assets/images/research/bg-research.png" alt="Research Background" />
+
+    <div class="research-header fade-section">
+        <p class="research-label">LAB RECORDS</p>
+        <h1>RESEARCH</h1>
+        <p class="research-lead">
+            研究・論文・評価実験の記録をまとめています。
+        </p>
+    </div>
+
+    <div class="research-scroll-area fade-section">
+        <button class="research-scroll-btn left" id="researchScrollLeft" type="button">
+            ‹
+        </button>
+
+        <div class="research-card-row" id="researchCardRow">
+            <!-- JSで研究カードを生成 -->
+        </div>
+
+        <button class="research-scroll-btn right" id="researchScrollRight" type="button">
+            ›
+        </button>
+    </div>
+
+    <!-- 詳細ポップアップ -->
+    <div class="research-modal" id="researchModal" aria-hidden="true">
+        <div class="research-modal-bg" id="researchModalBg"></div>
+
+        <div class="research-modal-content">
+            <button class="research-modal-close" id="researchModalClose" type="button">
+                ×
+            </button>
+
+            <div class="research-modal-inner">
+                <p class="research-modal-label" id="researchModalLabel"></p>
+                <h2 id="researchModalTitle"></h2>
+
+                <div class="research-modal-tags" id="researchModalTags"></div>
+
+                <div class="research-modal-block">
+                    <h3>課題</h3>
+                    <p id="researchModalProblem"></p>
+                </div>
+
+                <div class="research-modal-block">
+                    <h3>方法</h3>
+                    <p id="researchModalMethod"></p>
+                </div>
+
+                <div class="research-modal-block">
+                    <h3>成果</h3>
+                    <p id="researchModalResult"></p>
+                </div>
+
+                <div class="research-modal-block">
+                    <h3>今後</h3>
+                    <p id="researchModalFuture"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

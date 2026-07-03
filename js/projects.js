@@ -2,22 +2,22 @@ const projectCards = [
   {
     category: "unity",
     image: "assets/images/projects/card-quest1.png",
-    link: "./projects/quest1.html",
+    popupImage: "assets/images/projects/card-quest1.png",
   },
   {
     category: "web",
     image: "assets/images/projects/card-quest2.png",
-    link: "./projects/quest2.html",
+    popupImage: "assets/images/projects/card-quest2.png",
   },
   {
     category: "unity",
     image: "assets/images/projects/card-quest3.png",
-    link: "./projects/quest3.html",
+    popupImage: "assets/images/projects/card-quest3.png",
   },
   {
-    category: "app",
+    category: "unity",
     image: "assets/images/projects/card-quest4.png",
-    link: "./projects/quest4.html",
+    popupImage: "assets/images/projects/card-quest4.png",
   },
 ];
 
@@ -27,7 +27,35 @@ function initProjectCards() {
   const scrollLeftBtn = document.getElementById("projectScrollLeft");
   const scrollRightBtn = document.getElementById("projectScrollRight");
 
+  const projectModal = document.getElementById("projectModal");
+  const projectModalBg = document.getElementById("projectModalBg");
+  const projectModalClose = document.getElementById("projectModalClose");
+  const projectModalImage = document.getElementById("projectModalImage");
+
   if (!projectCardRow || projectTabs.length === 0) return;
+
+  function openProjectModal(cardData) {
+    if (!projectModal || !projectModalImage) return;
+
+    projectModalImage.src = cardData.popupImage || cardData.image;
+    projectModal.classList.add("active");
+    projectModal.setAttribute("aria-hidden", "false");
+
+    document.body.classList.add("modal-open");
+  }
+
+  function closeProjectModal() {
+    if (!projectModal || !projectModalImage) return;
+
+    projectModal.classList.remove("active");
+    projectModal.setAttribute("aria-hidden", "true");
+
+    document.body.classList.remove("modal-open");
+
+    setTimeout(() => {
+      projectModalImage.src = "";
+    }, 250);
+  }
 
   function renderProjectCards(category = "all") {
     projectCardRow.innerHTML = "";
@@ -47,9 +75,7 @@ function initProjectCards() {
       `;
 
       card.addEventListener("click", () => {
-        if (cardData.link) {
-          window.location.href = cardData.link;
-        }
+        openProjectModal(cardData);
       });
 
       projectCardRow.appendChild(card);
@@ -85,6 +111,20 @@ function initProjectCards() {
       });
     });
   }
+
+  if (projectModalBg) {
+    projectModalBg.addEventListener("click", closeProjectModal);
+  }
+
+  if (projectModalClose) {
+    projectModalClose.addEventListener("click", closeProjectModal);
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeProjectModal();
+    }
+  });
 
   renderProjectCards();
 }
